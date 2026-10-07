@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 a{
     text-decoration: none;
 }
 
 body{
     max-width: 2500px;
+    width: 100%;
     font-family: poppins,sans-serif;
     background-color:black;
     margin: auto;
-    box-sizing: border-box;
     color: #fff;
 }
 
@@ -740,7 +746,7 @@ section .header{
 
 }
 
-@media(max-width=600px){
+@media (max-width: 600px) {
     header .image::before{
         display: none;
     }
@@ -772,4 +778,274 @@ section .header{
         text-align: center;
     }
 
+}
+
+nav {
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(0.75rem, 3vw, 3rem);
+    margin: 0;
+    padding: 0;
+}
+
+.link a {
+    font-size: clamp(1rem, 2.2vw, 2rem);
+}
+
+.hero {
+    width: min(100%, 1800px);
+    margin: 0 auto;
+    padding: clamp(1rem, 3vw, 2rem);
+    gap: clamp(1.5rem, 4vw, 4rem);
+}
+
+.hero .content {
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+}
+
+.hero .content h1 {
+    font-size: clamp(2.25rem, 5.2vw, 5.5rem);
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+}
+
+.hero .content p {
+    font-size: clamp(1.125rem, 1.6vw, 1.5rem);
+    line-height: 1.7;
+}
+
+.content li {
+    margin: 0 0 0.75rem clamp(1rem, 2vw, 2rem);
+    font-size: clamp(1rem, 1.4vw, 1.35rem);
+    line-height: 1.6;
+}
+
+.hire h2 {
+    font-size: clamp(1.25rem, 2vw, 2rem);
+}
+
+.content a {
+    display: inline-block;
+    margin-top: 0;
+    padding: 0.75rem 1.5rem;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+.nav-logo {
+    flex: 0 1 35%;
+    max-width: 450px;
+    min-width: 0;
+}
+
+.nav-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.skills h2 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.tech-card img {
+    width: clamp(3.5rem, 8vw, 6.25rem);
+    height: auto;
+}
+
+.projects-slider-section {
+    width: min(calc(100% - 2rem), 1500px);
+    margin: clamp(3rem, 7vw, 5rem) auto;
+    padding: 0;
+}
+
+.project-slide {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: clamp(1.25rem, 3vw, 3rem);
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+.project-image img {
+    width: 100%;
+    height: clamp(15rem, 32vw, 31.25rem);
+    object-fit: cover;
+}
+
+.project-info h2 {
+    font-size: clamp(1.35rem, 2.2vw, 1.875rem);
+    overflow-wrap: anywhere;
+}
+
+.Features {
+    width: min(calc(100% - 2rem), 1600px);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+.Features .card {
+    width: auto;
+    min-width: 0;
+    padding: clamp(1rem, 2.5vw, 2rem);
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+}
+
+.Features .card a {
+    display: inline-block;
+    margin-top: 0;
+    padding: 0.75rem 1.25rem;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+}
+
+.container {
+    padding: clamp(3rem, 7vw, 5rem) clamp(1rem, 3vw, 2rem);
+}
+
+.container .header {
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+}
+
+.services > h1 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.services > h3 {
+    font-size: clamp(1.125rem, 2vw, 1.75rem);
+    text-align: center;
+}
+
+.pricing {
+    width: min(100%, 1600px);
+    margin: clamp(1.5rem, 4vw, 3rem) auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pricing .card {
+    min-width: 0;
+    padding: clamp(1rem, 2vw, 2rem);
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+}
+
+.pricing .card .content {
+    font-size: 1rem;
+}
+
+.pricing .card h2 {
+    font-size: clamp(1.25rem, 1.8vw, 1.75rem);
+}
+
+.pricing .card h3 {
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+}
+
+.pricing .card li {
+    line-height: 1.6;
+}
+
+.footer-container {
+    grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr)) minmax(0, 1.4fr);
+    gap: clamp(1.5rem, 4vw, 5rem);
+}
+
+.footer-bottom {
+    gap: 1rem;
+}
+
+@media (max-width: 1200px) {
+    .Features,
+    .pricing {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-links {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero .content {
+        width: 100%;
+    }
+
+    .content li {
+        text-align: left;
+    }
+
+    .nav-logo {
+        flex-basis: auto;
+        width: min(75%, 28rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-slide.active {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.25rem;
+    }
+
+    .project-image img {
+        height: clamp(12rem, 55vw, 18rem);
+    }
+
+    .project-info {
+        text-align: left;
+    }
+
+    .project-tech {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .Features,
+    .pricing,
+    .footer-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .Features .card:hover,
+    .pricing .card:hover {
+        transform: translateY(-0.5rem);
+    }
+
+    .footer {
+        padding: 3.5rem 1.25rem 1.5rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .slider-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.25rem;
+    }
+
+    .slider-btn.prev {
+        left: 0.25rem;
+    }
+
+    .slider-btn.next {
+        right: 0.25rem;
+    }
 }
