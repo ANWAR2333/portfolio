@@ -871,6 +871,14 @@ nav {
     padding: clamp(1rem, 3vw, 2rem);
 }
 
+.slider-btn.prev {
+    left: 0.25rem;
+}
+
+.slider-btn.next {
+    right: 0.25rem;
+}
+
 .project-image img {
     width: 100%;
     height: clamp(15rem, 32vw, 31.25rem);
